@@ -1,19 +1,12 @@
 import React from 'react';
-
-export default function App() {
-  return <h1>Hello World</h1>;
-}
-
-
-import { Component } from 'react'
+import { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
 } from 'react-router-dom';
-import SearchPage from './SearchPage.js';
-import DetailPage from './DetailPage.js';
+import ArnoldDetail from '../hey-arnold/ArnoldDetail.jsx';
 
 export default class App extends Component {
   render() {
@@ -24,21 +17,17 @@ export default class App extends Component {
             <Route
               path="/"
               exact={true}
-              component={QuoteSearchPage}
+              component={ArnoldDetail}
             />
             <Route
-              path="/quotes"
+              path="/details"
               exact={true}
-              component={QuotePage}
-            />
-            <Route
-              path="/quotes/:quoteId"
-              component={QuoteDetailPage}
+              component={ArnoldDetail}
             />
             <Redirect to="/" />
           </Switch>
         </Router>
       </div>
-    )
+    );
   }
 }
