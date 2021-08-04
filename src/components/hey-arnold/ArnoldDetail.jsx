@@ -17,3 +17,4 @@ ArnoldDetail.propTypes = {
 };
 
 export default ArnoldDetail;
+
